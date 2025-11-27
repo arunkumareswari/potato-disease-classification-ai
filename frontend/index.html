@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Disease Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🥔 Potato Disease Classifier</h1>
+        <p class="subtitle">Upload or drag & drop a potato leaf image to detect diseases</p>
+
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📤</div>
+            <div class="upload-text">Click to upload or drag & drop</div>
+            <div class="upload-subtext">PNG, JPG, JPEG (Max 10MB)</div>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+
+        <div class="preview-container" id="previewContainer">
+            <img id="previewImage" class="preview-image" alt="Preview">
+            <button class="btn btn-predict" id="predictBtn">🔍 Detect Disease</button>
+            <button class="btn btn-reset" id="resetBtn">🔄 Upload Another Image</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 15px; color: #ff6b35; font-weight: 600;">Analyzing image...</p>
+        </div>
+
+        <div class="result-container" id="resultContainer">
+            <div class="result-title" id="resultTitle"></div>
+            <div class="result-confidence" id="resultConfidence"></div>
+        </div>
+
+        <div class="error" id="error"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
